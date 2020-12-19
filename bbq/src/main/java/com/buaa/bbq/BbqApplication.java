@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @MapperScan("com.buaa.bbq.mapper")
-@EnableDiscoveryClient\
+@EnableDiscoveryClient
 @EnableFeignClients
 public class BbqApplication {
 

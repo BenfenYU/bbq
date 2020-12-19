@@ -29,9 +29,6 @@ mybatis:
 server:
   port: 9001
 
-feign:
-  sentinel:
-    enabled: true
 
 
 

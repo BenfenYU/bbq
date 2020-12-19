@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(value = "user-provider")
+@FeignClient(value = "user-provider",fallback = MessageServiceConsumerFallback.class)
 public interface MessageConsumerService {
     /*
     @GetMapping(value = "/user/getById/{userId}")

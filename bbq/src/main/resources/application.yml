@@ -19,6 +19,10 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8080
 
 mybatis:
   type-aliases-package: com.buaa.bbq.model
@@ -31,5 +35,16 @@ server:
 
 prop:
   upload-folder: D:\\buaa image\\
+
+
+feign:
+  sentinel:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 

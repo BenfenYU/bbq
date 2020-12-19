@@ -9,7 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
-@FeignClient(value = "user-provider")
+@FeignClient(value = "user-provider",fallback = BbqServiceConsumerFallback.class)
 public interface BbqServiceConsumer {
     /*
     @GetMapping(value = "/user/getById/{userId}")
