@@ -1,0 +1,38 @@
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/buaa?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: 123456
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      driver-class-name: com.mysql.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  application:
+    name: user-provider  # 必须加名字，为了服务的名字进行交互
+    cloud:
+      nacos:
+        discovery:
+          server-addr: 127.0.0.1:8848 # nacos服务端的地址
+
+mybatis:
+  type-aliases-package: com.buaa.user.model
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+server:
+  port: 9001
+
+feign:
+  sentinel:
+    enabled: true
+
+
+
+

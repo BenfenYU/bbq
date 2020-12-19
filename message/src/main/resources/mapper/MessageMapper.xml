@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.buaa.message.mapper.MessageMapper">
+  <resultMap id="BaseResultMap" type="com.buaa.message.model.Message">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="message_id" jdbcType="INTEGER" property="messageId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="message_detail" jdbcType="VARCHAR" property="messageDetail" />
+    <result column="message_date" jdbcType="TIMESTAMP" property="messageDate" />
+  </resultMap>
+</mapper>

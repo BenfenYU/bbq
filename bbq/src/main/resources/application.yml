@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/buaa?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: 123456
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      driver-class-name: com.mysql.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  application:
+    name: bbq-consumer-feign
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+mybatis:
+  type-aliases-package: com.buaa.bbq.model
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+server:
+  port: 9002
+
+prop:
+  upload-folder: D:\\buaa image\\
+
+
