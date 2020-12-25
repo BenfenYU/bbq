@@ -23,6 +23,10 @@ public class UserController {
     }
 
      */
+    @RequestMapping(value = "/user/gateway",method = RequestMethod.GET)
+    public String test(){
+        return "I am user from gateway";
+    }
 
     @RequestMapping(value = "/toLogin",method = RequestMethod.POST)
     public BaseResult toLogin(String userAccount, String userPassword){

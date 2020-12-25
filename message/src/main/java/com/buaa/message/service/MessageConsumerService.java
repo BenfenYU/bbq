@@ -1,6 +1,7 @@
 package com.buaa.message.service;
 
 import com.buaa.message.model.User;
+import com.buaa.message.service.impl.MessageServiceConsumerFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

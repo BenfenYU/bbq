@@ -13,6 +13,11 @@ import org.springframework.web.multipart.MultipartFile;
 @RequestMapping("/message")
 public class MessageController {
 
+    @RequestMapping(value = "/message/gateway",method = RequestMethod.GET)
+    public String test(){
+        return "I am message from gateway";
+    }
+
     @Autowired
     private MessageService messageService;
 

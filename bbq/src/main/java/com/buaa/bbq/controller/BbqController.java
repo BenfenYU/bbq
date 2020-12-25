@@ -14,10 +14,18 @@ public class BbqController {
     @Autowired
     private BbqService bbqService;
 
+    @Autowired
+    BbqServiceConsumer bbqServiceConsumer;
+
 
     @RequestMapping(value = "/bbq",method = RequestMethod.GET)
-    public BaseResult getAllBbqList(Integer offset, Integer limit){
+    public BaseResult test(Integer offset, Integer limit){
         return bbqService.getAllBbqOrderByDate(offset,limit);
+    }
+
+    @RequestMapping(value = "/bbq/gateway",method = RequestMethod.GET)
+    public String getAllBbqList(){
+        return "I am bbq from gateway";
     }
 
 
