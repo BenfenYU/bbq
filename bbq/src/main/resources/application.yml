@@ -14,7 +14,7 @@ spring:
       max-file-size: 50MB
       max-request-size: 50MB
   application:
-    name: bbq-consumer-feign
+    name: bbq-consumer
   cloud:
     nacos:
       discovery:
@@ -37,9 +37,10 @@ prop:
   upload-folder: D:\\buaa image\\
 
 
+# 淦，只要使用sentinel，feign就报空指针，难道是版本不容？
 feign:
   sentinel:
-    enabled: true
+    enabled: false
 
 management:
   endpoints:

@@ -2,7 +2,6 @@ package com.buaa.bbq.controller;
 
 import com.buaa.bbq.common.BaseResult;
 import com.buaa.bbq.service.BbqService;
-import com.buaa.bbq.service.BbqServiceConsumer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -11,22 +10,15 @@ import org.springframework.web.multipart.MultipartFile;
 @RequestMapping("bbq")
 public class BbqController {
 
-    @Autowired
-    private BbqService bbqService;
-
-    @Autowired
-    BbqServiceConsumer bbqServiceConsumer;
-
-
-    @RequestMapping(value = "/bbq",method = RequestMethod.GET)
-    public BaseResult test(Integer offset, Integer limit){
-        return bbqService.getAllBbqOrderByDate(offset,limit);
-    }
 
     @RequestMapping(value = "/bbq/gateway",method = RequestMethod.GET)
-    public String getAllBbqList(){
+    public String test(){
         return "I am bbq from gateway";
     }
+
+
+    @Autowired
+    private BbqService bbqService;
 
 
     /*
@@ -37,6 +29,11 @@ public class BbqController {
     }
 
      */
+
+    @RequestMapping(value = "/bbq",method = RequestMethod.GET)
+    public BaseResult test(Integer offset, Integer limit){
+        return bbqService.getAllBbqOrderByDate(offset,limit);
+    }
 
     @RequestMapping(value = "/bbq/{bbqId}",method = RequestMethod.GET)
     public BaseResult getABbqByBbqId(@PathVariable("bbqId")Integer bbqId){

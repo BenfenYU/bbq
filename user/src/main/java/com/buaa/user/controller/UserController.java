@@ -23,9 +23,9 @@ public class UserController {
     }
 
      */
-    @RequestMapping(value = "/user/gateway",method = RequestMethod.GET)
+    @RequestMapping(value = "/login",method = RequestMethod.GET)
     public String test(){
-        return "I am user from gateway";
+        return "I am user";
     }
 
     @RequestMapping(value = "/toLogin",method = RequestMethod.POST)
@@ -46,7 +46,7 @@ public class UserController {
 
     @RequestMapping(value = "/getById/{userId}",method = RequestMethod.GET)
     public User getAUser(@PathVariable("userId") Integer userId){
-        System.out.println(userId);
+        // System.out.println(userId);
         return userService.getUserByUserId(userId);
     }
 

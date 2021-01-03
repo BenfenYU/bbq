@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: oauth2-client  # 必须加名字，为了服务的名字进行交互
+    cloud:
+      nacos:
+        discovery:
+          server-addr: 127.0.0.1:8848 # nacos服务端的地址
+      sentinel:
+        transport:
+          port: 8719
+          dashboard: localhost:8080
+
+server:
+  port: 9100
+
+
+feign:
+  sentinel:
+    enabled: false
+
+
+
+
+

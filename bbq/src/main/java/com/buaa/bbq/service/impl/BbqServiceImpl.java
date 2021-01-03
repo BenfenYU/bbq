@@ -4,14 +4,12 @@ import com.buaa.bbq.common.BaseResult;
 import com.buaa.bbq.mapper.*;
 import com.buaa.bbq.model.*;
 import com.buaa.bbq.service.BbqService;
-import com.buaa.bbq.service.BbqServiceConsumer;
+import com.buaa.bbq.service.BbqConsumerService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 import tk.mybatis.mapper.entity.Example;
@@ -26,7 +24,7 @@ public class BbqServiceImpl implements BbqService {
 
     // 用来找服务提供者
     @Autowired
-    BbqServiceConsumer bbqServiceConsumer;
+    BbqConsumerService bbqServiceConsumer;
 
     /*
     public String getAllBbqList(){
