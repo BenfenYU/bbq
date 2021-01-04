@@ -6,16 +6,40 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="bbq" />
+        <module name="demo (2)" />
+        <module name="oAuth2-authentication" />
+        <module name="oAuth2-client" />
+        <module name="oAuth2-resource" />
+        <module name="demo (1) (org.springframework.boot)" />
         <module name="demo" />
+        <module name="user" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="bbq" target="1.5" />
       <module name="demo" target="1.8" />
+      <module name="demo (1) (org.springframework.boot)" target="1.8" />
+      <module name="demo (2)" target="1.8" />
+      <module name="demo (3)" target="1.8" />
+      <module name="oAuth2" target="1.8" />
+      <module name="oAuth2-authentication" target="1.8" />
+      <module name="oAuth2-client" target="1.8" />
+      <module name="oAuth2-dependencies" target="1.5" />
+      <module name="oAuth2-resource" target="1.8" />
+      <module name="user" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo" options="-parameters" />
+      <module name="demo (1) (org.springframework.boot)" options="-parameters" />
+      <module name="demo (2)" options="-parameters" />
+      <module name="demo (3)" options="-parameters" />
+      <module name="oAuth2-authentication" options="-parameters" />
+      <module name="oAuth2-client" options="-parameters" />
+      <module name="oAuth2-resource" options="-parameters" />
+      <module name="user" options="-parameters" />
     </option>
   </component>
 </project>

@@ -8,10 +8,10 @@
         <version>2.3.2.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>demo</artifactId>
+    <groupId>com.buaa</groupId>
+    <artifactId>message</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>buaa</name>
+    <name>message</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -95,6 +95,12 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
             <version>2.2.0.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-base</artifactId>
+            <version>1.0.1</version>
+            <scope>compile</scope>
         </dependency>
 
 

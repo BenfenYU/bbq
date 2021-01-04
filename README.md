@@ -67,7 +67,10 @@ v1.3 - gateway统一访问
 
 ### 接口
 
-- 测试（任意的token，为了躲避筛选）：http://localhost:10000/oauth2-client{接口}?token=fsdg
+- 测试（任意的token，为了躲避网关筛选）：
+    - http://localhost:10000/oauth2-client/bbq/test?token=fsdg
+    - http://localhost:10000/oauth2-client/message/test?token=fsdg
+    - http://localhost:10000/oauth2-client/user/test?token=fsdg
 
 - 接口表，bbq、message、user、其他
 

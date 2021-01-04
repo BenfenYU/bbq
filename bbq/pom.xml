@@ -8,10 +8,10 @@
         <version>2.3.2.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>buaa</name>
+    <groupId>com.buaa</groupId>
+    <artifactId>bbq</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>bbq</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -79,8 +79,6 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
             <version>2.2.3.RELEASE</version>
         </dependency>
-
-
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
@@ -92,7 +90,6 @@
             <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
             <version>2.0.0.RELEASE</version>
         </dependency>
-
 
         <dependency>
             <groupId>com.alibaba.cloud</groupId>

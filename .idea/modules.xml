@@ -4,6 +4,14 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/bbq.iml" filepath="$PROJECT_DIR$/.idea/bbq.iml" />
       <module fileurl="file://$PROJECT_DIR$/bbq/demo.iml" filepath="$PROJECT_DIR$/bbq/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/demo (1) (org.springframework.boot).iml" filepath="$PROJECT_DIR$/gateway/demo (1) (org.springframework.boot).iml" />
+      <module fileurl="file://$PROJECT_DIR$/message/demo (2).iml" filepath="$PROJECT_DIR$/message/demo (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/oAuth2/oAuth2.iml" filepath="$PROJECT_DIR$/oAuth2/oAuth2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oAuth2/oAuth2-authentication/oAuth2-authentication.iml" filepath="$PROJECT_DIR$/oAuth2/oAuth2-authentication/oAuth2-authentication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oAuth2-client/oAuth2-client.iml" filepath="$PROJECT_DIR$/oAuth2-client/oAuth2-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oAuth2/oAuth2-dependencies/oAuth2-dependencies.iml" filepath="$PROJECT_DIR$/oAuth2/oAuth2-dependencies/oAuth2-dependencies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oAuth2/oAuth2-resource/oAuth2-resource.iml" filepath="$PROJECT_DIR$/oAuth2/oAuth2-resource/oAuth2-resource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user/user.iml" filepath="$PROJECT_DIR$/user/user.iml" />
     </modules>
   </component>
 </project>

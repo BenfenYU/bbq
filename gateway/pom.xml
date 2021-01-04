@@ -9,7 +9,8 @@
         <version>2.3.2.RELEASE</version>
     </parent>
 
-    <artifactId>demo</artifactId>
+    <groupId>com.buaa</groupId>
+    <artifactId>gateway</artifactId>
     <packaging>jar</packaging>
 
     <name>gateway</name>
