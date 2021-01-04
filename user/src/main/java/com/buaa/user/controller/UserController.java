@@ -3,6 +3,7 @@ package com.buaa.user.controller;
 import com.buaa.user.common.BaseResult;
 import com.buaa.user.model.User;
 import com.buaa.user.service.UserService;
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("user")
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
@@ -23,7 +24,7 @@ public class UserController {
     }
 
      */
-    @RequestMapping(value = "/login",method = RequestMethod.GET)
+    @RequestMapping(value = "/test",method = RequestMethod.GET)
     public String test(){
         return "I am user";
     }

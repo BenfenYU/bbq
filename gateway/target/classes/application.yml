@@ -36,14 +36,18 @@ spring:
           uri: lb://user-provider
           predicates:
             - Method=GET,POST
+        - id: OAUTH2-CLIENT
+          uri: lb://oauth2-client
+          predicates:
+            - Method=GET,POST
 
 server:
-  port: 9000
+  port: 10000
 
 # 目前无效
 feign:
   sentinel:
-    enabled: true
+    enabled: false
 
 # 目前无效
 management:

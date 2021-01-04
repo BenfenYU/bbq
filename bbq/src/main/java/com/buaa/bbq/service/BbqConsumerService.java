@@ -5,7 +5,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(value = "user-provider",fallback = BbqServiceConsumerFallback.classva)
+@FeignClient(value = "user-provider",fallback = BbqServiceConsumerFallback.class)
 public interface BbqConsumerService {
     /*
     @GetMapping(value = "/user/getById/{userId}")

@@ -11,7 +11,7 @@ spring:
           dashboard: localhost:8080
 
 server:
-  port: 9100
+  port: 10010
 
 
 feign:

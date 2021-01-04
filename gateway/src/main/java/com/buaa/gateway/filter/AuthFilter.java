@@ -15,19 +15,15 @@ public class AuthFilter implements GlobalFilter, Ordered {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 
-        String login = exchange.getRequest().getPath().value();
+        String path = exchange.getRequest().getPath().value();
 
-        System.out.println("pre "+login);
+        System.out.println("pre "+path);
 
-        if(login.equals("/oauth2-client/login")){
-            System.out.println(login);
+        if(path.equals("/login")){
             return chain.filter(exchange);
         }
 
-        String register = exchange.getRequest().getPath().value();
-
-        if(register.equals("/oauth2-client/register")){
-            System.out.println(register);
+        if(path.equals("/register")){
             return chain.filter(exchange);
         }
 

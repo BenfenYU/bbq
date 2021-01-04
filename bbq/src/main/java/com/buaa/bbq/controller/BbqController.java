@@ -30,6 +30,11 @@ public class BbqController {
 
      */
 
+    @RequestMapping(value = "/test",method = RequestMethod.GET)
+    public String bbqTest(Integer offset, Integer limit){
+        return "我是bbq";
+    }
+
     @RequestMapping(value = "/bbq",method = RequestMethod.GET)
     public BaseResult test(Integer offset, Integer limit){
         return bbqService.getAllBbqOrderByDate(offset,limit);

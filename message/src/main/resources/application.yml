@@ -31,7 +31,7 @@ mybatis:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 server:
-  port: 9003
+  port: 9021
 
 prop:
   upload-folder: D:\\buaa image\\

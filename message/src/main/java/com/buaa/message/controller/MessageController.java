@@ -13,13 +13,13 @@ import org.springframework.web.multipart.MultipartFile;
 @RequestMapping("/message")
 public class MessageController {
 
-    @RequestMapping(value = "/message/gateway",method = RequestMethod.GET)
-    public String test(){
-        return "I am message from gateway";
-    }
-
     @Autowired
     private MessageService messageService;
+
+    @RequestMapping(value = "/test",method = RequestMethod.GET)
+    public String test(){
+        return "我是message";
+    }
 
     @RequestMapping(value = "/message",method = RequestMethod.GET)
     public BaseResult getAllMessageOrderByDate(Integer offset, Integer limit){
