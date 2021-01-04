@@ -67,7 +67,11 @@ v1.3 - gateway统一访问
 
 ### 接口
 
-- 测试（任意的token，为了躲避网关筛选）：
+- 说明
+    - 2020.1.4测试，和oauth相关的服务，请只启动oauth2-client，其它服务不要启动，本次测试不包含
+    权限控制。
+
+- 测试（任意的token，为了躲避网关筛选）：    
     - http://localhost:10000/oauth2-client/bbq/test?token=fsdg
     - http://localhost:10000/oauth2-client/message/test?token=fsdg
     - http://localhost:10000/oauth2-client/user/test?token=fsdg
