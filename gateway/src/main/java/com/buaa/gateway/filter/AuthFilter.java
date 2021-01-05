@@ -19,17 +19,19 @@ public class AuthFilter implements GlobalFilter, Ordered {
 
         System.out.println("pre "+path);
 
-        if(path.equals("/login")){
+        if(path.equals("/oauth2-client/login")){
             return chain.filter(exchange);
         }
 
-        if(path.equals("/register")){
+        if(path.equals("/oauth2-client/register")){
             return chain.filter(exchange);
         }
 
         String token = exchange.getRequest().getQueryParams().getFirst("token");
         //System.out.println(token);
         if(token == null || token.isEmpty()){
+
+            // 401
             exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
             return exchange.getResponse().setComplete();
         }

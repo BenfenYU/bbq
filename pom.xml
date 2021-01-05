@@ -14,7 +14,7 @@
         </module>
         <module>message</module>
         <module>gateway</module>
-        <module>oAuth2</module>
+        <!--module>spring-security-oauth2</module-->
         <module>oAuth2-client</module>
         <module>user</module>
     </modules>

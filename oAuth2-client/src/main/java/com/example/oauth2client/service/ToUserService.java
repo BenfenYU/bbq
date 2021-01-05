@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
-@FeignClient(value = "user-provider")
+@FeignClient(value = "oauth2-resource")
 public interface ToUserService {
 
     @RequestMapping(value = "/user/test",method = RequestMethod.GET)

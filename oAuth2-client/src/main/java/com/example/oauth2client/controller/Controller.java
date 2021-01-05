@@ -1,13 +1,18 @@
 package com.example.oauth2client.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.example.oauth2client.common.BaseResult;
 import com.example.oauth2client.service.BbqService;
 import com.example.oauth2client.service.MessageService;
 import com.example.oauth2client.service.OAuth2ClientService;
 import com.example.oauth2client.service.ToUserService;
+import okhttp3.*;
+import okhttp3.RequestBody;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
 
 @RestController
 public class Controller {
@@ -25,8 +30,17 @@ public class Controller {
     private MessageService messageService;
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public Object login(String userAccount, String userPassword){
-        return oAuth2ClientService.login(userAccount, userPassword);
+    public BaseResult login(String userAccount, String userPassword) throws IOException {
+        BaseResult baseResult = new BaseResult();
+        String token = getToken(userAccount,userPassword);
+        System.out.println(String.format("token: %s", token));
+        if (token == null){
+            baseResult.setStatus(500);
+            return baseResult;
+        }else{
+            baseResult.setMessage(token);
+            return baseResult;
+        }
     }
 
     @RequestMapping(value = "/register",method = RequestMethod.POST)
@@ -120,5 +134,26 @@ public class Controller {
     public BaseResult addMessageImageForMessage(@RequestParam(value = "file",required = false) MultipartFile file,
                                                 @RequestParam("messageId") Integer messageId){
         return messageService.addMessageImageForMessage(messageId,file);
+    }
+
+    public String getToken(String username,String password) throws IOException {
+
+        OkHttpClient client = new OkHttpClient().newBuilder()
+                .build();
+        MediaType mediaType = MediaType.parse("application/x-www-form-urlencoded");
+        RequestBody b = RequestBody.create(mediaType,
+                String.format("username=%s&password=%s&grant_type=password&client_id=client&client_secret=123456", username,password));
+        Request request = new Request.Builder()
+                .url("http://localhost:10020/oauth/token")
+                .method("POST", b)
+                .addHeader("Authorization", "Basic Y2xpZW50OjEyMzQ1Ng==")
+                .addHeader("Content-Type", "application/x-www-form-urlencoded")
+                .addHeader("Cookie", "JSESSIONID=7E61266231BC3DF3261CE52EB38B5E79")
+                .build();
+        Response r = client.newCall(request).execute();
+        JSONObject jsonObject = JSONObject.parseObject(r.body().string());
+        String token = (String)jsonObject.get("access_token");
+
+        return token;
     }
 }

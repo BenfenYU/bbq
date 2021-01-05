@@ -7,8 +7,10 @@
     <file url="file://$PROJECT_DIR$/message/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/message/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/oAuth2-client/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/oAuth2/oAuth2-authentication/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/oAuth2/oAuth2-resource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-security-oauth2/spring-security-oauth2-resource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-security-oauth2/spring-security-oauth2-resource/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-security-oauth2/spring-security-oauth2-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-security-oauth2/spring-security-oauth2-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user/src/main/java" charset="UTF-8" />
   </component>
 </project>
