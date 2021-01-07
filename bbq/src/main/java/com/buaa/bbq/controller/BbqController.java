@@ -32,6 +32,7 @@ public class BbqController {
 
     @RequestMapping(value = "/bbq",method = RequestMethod.GET)
     public BaseResult test(Integer offset, Integer limit){
+        System.out.println("zsh");
         return bbqService.getAllBbqOrderByDate(offset,limit);
     }
 

@@ -17,8 +17,9 @@
         <!--module>spring-security-oauth2</module-->
         <module>oAuth2-client</module>
         <module>user</module>
-        <module>spring-security-oauth2-resource</module>
         <module>spring-security-oauth2-server</module>
+        <module>bbq1</module>
+        <module>bbq2</module>
     </modules>
 
     

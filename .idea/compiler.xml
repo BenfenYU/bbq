@@ -16,10 +16,14 @@
         <module name="demo (1) (org.springframework.boot)" />
         <module name="demo" />
         <module name="user" />
+        <module name="bbq1" />
+        <module name="bbq2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="bbq" target="1.5" />
+      <module name="bbq1" target="1.8" />
+      <module name="bbq2" target="1.8" />
       <module name="demo" target="1.8" />
       <module name="demo (1) (org.springframework.boot)" target="1.8" />
       <module name="demo (2)" target="1.8" />
@@ -37,6 +41,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="bbq1" options="-parameters" />
+      <module name="bbq2" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="demo (1) (org.springframework.boot)" options="-parameters" />
       <module name="demo (2)" options="-parameters" />

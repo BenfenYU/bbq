@@ -29,7 +29,6 @@ public class CommonServiceImpl implements CommonService {
         TbUser tbUser = new TbUser();
         tbUser.setUsername(userAccount);
         tbUser.setPassword(passwordEncoder.encode( userPassword));
-        tbUser.setUsername("");
         tbUser.setEmail(userEmail);
         tbUser.setPhone(userEmail);
         tbUser.setCreated(new Date());

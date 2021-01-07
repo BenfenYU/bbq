@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/bbq.iml" filepath="$PROJECT_DIR$/.idea/bbq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bbq1/bbq1.iml" filepath="$PROJECT_DIR$/bbq1/bbq1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bbq2/bbq2.iml" filepath="$PROJECT_DIR$/bbq2/bbq2.iml" />
       <module fileurl="file://$PROJECT_DIR$/bbq/demo.iml" filepath="$PROJECT_DIR$/bbq/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/gateway/demo (1) (org.springframework.boot).iml" filepath="$PROJECT_DIR$/gateway/demo (1) (org.springframework.boot).iml" />
       <module fileurl="file://$PROJECT_DIR$/message/demo (2).iml" filepath="$PROJECT_DIR$/message/demo (2).iml" />

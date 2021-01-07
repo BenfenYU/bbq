@@ -1,0 +1,63 @@
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/buaa?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: 123456
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      driver-class-name: com.mysql.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  application:
+    name: bbq
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8080
+
+mybatis:
+  type-aliases-package: com.buaa.bbq.model
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+server:
+  port: 9012
+
+prop:
+  upload-folder: /Users/benfen/Documents/images/
+
+
+# 淦，只要使用sentinel，feign就报空指针，难道是版本不容？
+feign:
+  sentinel:
+    enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+security:
+  oauth2:
+    client:
+      client-id: client
+      client-secret: 123456
+      access-token-uri: http://localhost:10020/oauth/token
+      user-authorization-uri: http://localhost:10020/oauth/authorize
+    resource:
+      token-info-uri: http://localhost:10020/oauth/check_token
+
+
+
+
