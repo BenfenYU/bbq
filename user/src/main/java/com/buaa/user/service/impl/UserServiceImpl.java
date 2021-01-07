@@ -47,7 +47,7 @@ public class UserServiceImpl implements UserService {
         BaseResult baseResult=new BaseResult();
         if (null==userMapper.selectOne(new User(user.getUserAccount()))){
             user.setUserDetail("普通用户");
-            user.setUserUrl("http://localhost:9833/img/logo.png");
+            user.setUserUrl(":9011/img/logo.png");
             int insert = userMapper.insert(user);
             if (insert>0){
                 baseResult.setStatus(200);

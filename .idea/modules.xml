@@ -11,6 +11,8 @@
       <module fileurl="file://$PROJECT_DIR$/oAuth2-client/oAuth2-client.iml" filepath="$PROJECT_DIR$/oAuth2-client/oAuth2-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/oAuth2/oAuth2-dependencies/oAuth2-dependencies.iml" filepath="$PROJECT_DIR$/oAuth2/oAuth2-dependencies/oAuth2-dependencies.iml" />
       <module fileurl="file://$PROJECT_DIR$/oAuth2/oAuth2-resource/oAuth2-resource.iml" filepath="$PROJECT_DIR$/oAuth2/oAuth2-resource/oAuth2-resource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trash/spring-security-oauth2-resource/spring-security-oauth2-resource.iml" filepath="$PROJECT_DIR$/trash/spring-security-oauth2-resource/spring-security-oauth2-resource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-security-oauth2-server/spring-security-oauth2-server.iml" filepath="$PROJECT_DIR$/spring-security-oauth2-server/spring-security-oauth2-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/user/user.iml" filepath="$PROJECT_DIR$/user/user.iml" />
     </modules>
   </component>

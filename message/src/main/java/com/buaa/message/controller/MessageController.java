@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 @RestController
-@RequestMapping("/message")
 public class MessageController {
 
     @Autowired
@@ -31,7 +30,7 @@ public class MessageController {
         return messageService.getAMessageByMessageId(messageId);
     }
 
-    @RequestMapping(value = "/message",method = RequestMethod.POST)
+    @RequestMapping(value = "/addmessage",method = RequestMethod.POST)
     public BaseResult addMessage(Integer userId,String messageDetail){
         return messageService.addAMessage(userId,messageDetail);
     }

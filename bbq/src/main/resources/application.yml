@@ -14,7 +14,7 @@ spring:
       max-file-size: 50MB
       max-request-size: 50MB
   application:
-    name: bbq-consumer
+    name: bbq
   cloud:
     nacos:
       discovery:
@@ -34,7 +34,7 @@ server:
   port: 9011
 
 prop:
-  upload-folder: D:\\buaa image\\
+  upload-folder: /Users/benfen/Documents/images/
 
 
 # 淦，只要使用sentinel，feign就报空指针，难道是版本不容？
@@ -47,5 +47,17 @@ management:
     web:
       exposure:
         include: "*"
+
+security:
+  oauth2:
+    client:
+      client-id: client
+      client-secret: 123456
+      access-token-uri: http://localhost:10020/oauth/token
+      user-authorization-uri: http://localhost:10020/oauth/authorize
+    resource:
+      token-info-uri: http://localhost:10020/oauth/check_token
+
+
 
 

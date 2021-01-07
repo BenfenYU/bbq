@@ -17,7 +17,7 @@ public class AuthFilter implements GlobalFilter, Ordered {
 
         String path = exchange.getRequest().getPath().value();
 
-        System.out.println("pre "+path);
+        // System.out.println("pre "+path);
 
         if(path.equals("/oauth2-client/login")){
             return chain.filter(exchange);
@@ -27,7 +27,15 @@ public class AuthFilter implements GlobalFilter, Ordered {
             return chain.filter(exchange);
         }
 
-        String token = exchange.getRequest().getQueryParams().getFirst("token");
+        if(path.equals("/bbq/bbqimage")){
+            return chain.filter(exchange);
+        }
+
+        if(path.equals("/message/messageimg")){
+            return chain.filter(exchange);
+        }
+
+        String token = exchange.getRequest().getQueryParams().getFirst("access_token");
         //System.out.println(token);
         if(token == null || token.isEmpty()){
 

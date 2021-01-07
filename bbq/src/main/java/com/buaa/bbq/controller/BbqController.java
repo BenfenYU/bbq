@@ -7,14 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 @RestController
-@RequestMapping("bbq")
 public class BbqController {
-
-
-    @RequestMapping(value = "/bbq/gateway",method = RequestMethod.GET)
-    public String test(){
-        return "I am bbq from gateway";
-    }
 
 
     @Autowired
@@ -34,6 +27,8 @@ public class BbqController {
     public String bbqTest(Integer offset, Integer limit){
         return "我是bbq";
     }
+
+    // ok
 
     @RequestMapping(value = "/bbq",method = RequestMethod.GET)
     public BaseResult test(Integer offset, Integer limit){

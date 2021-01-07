@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(value = "user-provider",fallback = MessageServiceConsumerFallback.class)
+@FeignClient(value = "user",fallback = MessageServiceConsumerFallback.class)
 public interface MessageConsumerService {
     /*
     @GetMapping(value = "/user/getById/{userId}")
     String getById(@PathVariable("userId") String userId);
      */
-    @GetMapping(value = "/user/getById/{userId}")
+    @GetMapping(value = "/getById/{userId}")
     User getById(@PathVariable("userId") Integer userId);
 }

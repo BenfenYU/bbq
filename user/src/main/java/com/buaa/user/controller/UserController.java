@@ -11,29 +11,24 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/user")
 public class UserController {
 
     @Autowired
     private UserService userService;
 
-    /*
-    @RequestMapping(value = "/getById/{userId}")
-    public String toLogin(@PathVariable String userId){
-        return  "I am user-provider " + userId ;
-    }
-
-     */
+    // ok
     @RequestMapping(value = "/test",method = RequestMethod.GET)
     public String test(){
         return "I am user";
     }
 
+    // ok
     @RequestMapping(value = "/toLogin",method = RequestMethod.POST)
     public BaseResult toLogin(String userAccount, String userPassword){
         return userService.toLogin(userAccount, userPassword);
     }
 
+    // ok
     @RequestMapping(value = "/user",method = RequestMethod.POST)
     public BaseResult register(String userAccount,String userPassword,String userName,String userEmail){
         return userService.register(new User(userAccount,userPassword,userEmail,userName));

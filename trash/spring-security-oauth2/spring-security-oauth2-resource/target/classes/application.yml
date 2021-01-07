@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: oauth2-resource
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8080
+
+security:
+  oauth2:
+    client:
+      client-id: client
+      client-secret: 123456
+      access-token-uri: http://localhost:10020/oauth/token
+      user-authorization-uri: http://localhost:10020/oauth/authorize
+    resource:
+      token-info-uri: http://localhost:10020/oauth/check_token
+
+server:
+  port: 10030
+  #servlet:
+  #  context-path: /contents
+
+# 淦，只要使用sentinel，feign就报空指针，难道是版本不容？
+feign:
+  sentinel:
+    enabled: false
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+    org.springframework.security.oauth2: INFO

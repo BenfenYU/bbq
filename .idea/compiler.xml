@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="bbq" />
+        <module name="spring-security-oauth2-server" />
+        <module name="spring-security-oauth2-resource" />
         <module name="demo (2)" />
         <module name="oAuth2-authentication" />
         <module name="oAuth2-client" />
@@ -42,6 +44,8 @@
       <module name="oAuth2-authentication" options="-parameters" />
       <module name="oAuth2-client" options="-parameters" />
       <module name="oAuth2-resource" options="-parameters" />
+      <module name="spring-security-oauth2-resource" options="-parameters" />
+      <module name="spring-security-oauth2-server" options="-parameters" />
       <module name="user" options="-parameters" />
     </option>
   </component>

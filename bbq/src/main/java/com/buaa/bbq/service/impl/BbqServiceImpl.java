@@ -191,6 +191,7 @@ public class BbqServiceImpl implements BbqService {
         bbqcommentUser.setUser(user);
 
         baseResult.setStatus(200);
+        baseResult.setO(bbqcommentUser);
         return baseResult;
     }
 
@@ -220,14 +221,14 @@ public class BbqServiceImpl implements BbqService {
                 //得到当前时间
                 LocalDate date=LocalDate.now();
                 //根据时间创建目录
-                File targetpath=new File(UPLOAD_FOLDER+"\\bbqimg\\"+bbqId+"\\"+date);
+                File targetpath=new File(UPLOAD_FOLDER+"/bbqimg/"+bbqId+"/"+date);
                 if (!targetpath.exists()){
                     targetpath.mkdirs();
                 }
                 String filename= UUID.randomUUID().toString().replaceAll("-","")+"."+suffix;
                 file.transferTo(new File(targetpath,filename));
                 bbqimage.setBbqId(bbqId);
-                bbqimage.setBbqimageUrl("http://localhost:9833/img/bbqimg"+"/"+bbqId+"/"+date+"/"+filename);
+                bbqimage.setBbqimageUrl(":9011/img/bbqimg"+"/"+bbqId+"/"+date+"/"+filename);
                 bbqimageMapper.insert(bbqimage);
                 baseResult.setStatus(200);
                 return baseResult;

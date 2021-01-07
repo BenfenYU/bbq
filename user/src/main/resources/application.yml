@@ -14,7 +14,7 @@ spring:
       max-file-size: 50MB
       max-request-size: 50MB
   application:
-    name: user-provider  # 必须加名字，为了服务的名字进行交互
+    name: user  # 必须加名字，为了服务的名字进行交互
     cloud:
       nacos:
         discovery:
@@ -29,6 +29,15 @@ mybatis:
 server:
   port: 9001
 
+security:
+  oauth2:
+    client:
+      client-id: client
+      client-secret: 123456
+      access-token-uri: http://localhost:10020/oauth/token
+      user-authorization-uri: http://localhost:10020/oauth/authorize
+    resource:
+      token-info-uri: http://localhost:10020/oauth/check_token
 
 
 
