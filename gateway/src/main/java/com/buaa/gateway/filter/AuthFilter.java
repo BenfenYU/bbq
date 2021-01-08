@@ -35,6 +35,19 @@ public class AuthFilter implements GlobalFilter, Ordered {
             return chain.filter(exchange);
         }
 
+        if(path.equals("/user/getList")){
+            return chain.filter(exchange);
+        }
+
+
+        if(path.equals("/oauth2-server/getPermissions")){
+            return chain.filter(exchange);
+        }
+
+        if(path.equals("/oauth2-server/getRoles")){
+            return chain.filter(exchange);
+        }
+
         String token = exchange.getRequest().getQueryParams().getFirst("access_token");
         //System.out.println(token);
         if(token == null || token.isEmpty()){

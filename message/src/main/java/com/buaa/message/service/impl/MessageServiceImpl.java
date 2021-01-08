@@ -120,14 +120,14 @@ public class MessageServiceImpl implements MessageService {
                 //得到当前时间
                 LocalDate date=LocalDate.now();
                 //根据时间创建目录
-                File targetpath=new File(UPLOAD_FOLDER+"\\messageimg\\"+messageId+"\\"+date);
+                File targetpath=new File(UPLOAD_FOLDER+"/messageimg/"+messageId+"/"+date);
                 if (!targetpath.exists()){
                     targetpath.mkdirs();
                 }
                 String filename= UUID.randomUUID().toString().replaceAll("-","")+"."+suffix;
                 file.transferTo(new File(targetpath,filename));
                 messageimage.setMessageId(messageId);
-                messageimage.setMessageimageUrl("http://localhost:9833/img/messageimg"+"/"+messageId+"/"+date+"/"+filename);
+                messageimage.setMessageimageUrl(":9011/img/messageimg"+"/"+messageId+"/"+date+"/"+filename);
                 messageimageMapper.insert(messageimage);
                 baseResult.setStatus(200);
                 return baseResult;

@@ -22,7 +22,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
                 .and()
                 .authorizeRequests()
                 .antMatchers("/message/addmessage").hasAnyAuthority("systemmessageadd")
-                .antMatchers("/message/messageimg/").hasAnyAuthority("systemmessageaddimg")
+                //.antMatchers("/message/messageimg/").hasAnyAuthority("systemmessageaddimg")
                 .antMatchers("/message/single/").hasAnyAuthority("messagesingle")
                 .antMatchers("/message/message/").hasAnyAuthority("messagescan");
     }

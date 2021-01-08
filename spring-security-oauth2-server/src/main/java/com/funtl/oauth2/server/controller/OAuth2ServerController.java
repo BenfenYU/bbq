@@ -18,4 +18,27 @@ public class OAuth2ServerController {
 
         return commonService.register(userAccount,userPassword,userName,userEmail);
     }
+
+    @RequestMapping(value = "/getPermissions",method = RequestMethod.GET)
+    public BaseResult getPermissions(Integer offset,Integer limit){
+
+        return commonService.getPermissions( offset, limit);
+    }
+    @RequestMapping(value = "/getRoles",method = RequestMethod.GET)
+    public BaseResult getRoles(Integer offset,Integer limit){
+
+        return commonService.getRoles( offset, limit);
+    }
+
+    @RequestMapping(value = "/whichRole",method = RequestMethod.GET)
+    public BaseResult whichRole(String userAccount){
+
+        return commonService.whichRole( userAccount);
+    }
+    @RequestMapping(value = "/updateRole",method = RequestMethod.GET)
+    public BaseResult updateRole(String userAccount){
+
+        return commonService.updateRole( userAccount);
+    }
 }
+

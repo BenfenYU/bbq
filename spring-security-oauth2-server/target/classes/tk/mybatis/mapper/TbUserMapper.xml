@@ -25,4 +25,19 @@
   <insert id="insertUserRole" useGeneratedKeys="true" keyProperty="id" >
     insert into tb_user_role (user_id, role_id) VALUES (${user_id},2);
   </insert>
+  <select id="selectByUserName" resultMap="BaseResultMap">
+    select * from tb_user where username = '${userName}'
+  </select>
+
+  <select id="selectRoleByUserName" resultType="java.lang.String">
+    select t.enname from tb_user as u
+left join tb_user_role tr on u.id = tr.user_id
+left join tb_role t on tr.role_id=t.id
+where username = '${username}'
+
+  </select>
+
+  <update id="updateRoleByUserName">
+    update tb_user_role set role_id = 3 where user_id=(select id from tb_user where username='${username}');
+  </update>
 </mapper>

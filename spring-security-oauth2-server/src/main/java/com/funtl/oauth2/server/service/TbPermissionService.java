@@ -8,4 +8,6 @@ public interface TbPermissionService {
     default List<TbPermission> selectByUserId(Long userId) {
         return null;
     }
+
+    public List<TbPermission> selectAllPermissions(Long userId);
 }

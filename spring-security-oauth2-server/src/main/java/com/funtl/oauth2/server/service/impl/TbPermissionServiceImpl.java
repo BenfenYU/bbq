@@ -18,4 +18,10 @@ public class TbPermissionServiceImpl implements TbPermissionService {
     public List<TbPermission> selectByUserId(Long userId) {
         return tbPermissionMapper.selectByUserId(userId);
     }
+
+
+    @Override
+    public List<TbPermission> selectAllPermissions(Long userId) {
+        return tbPermissionMapper.selectAllPermissions();
+    }
 }

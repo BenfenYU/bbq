@@ -34,7 +34,7 @@ server:
   port: 9021
 
 prop:
-  upload-folder: D:\\buaa image\\
+  upload-folder: /Users/benfen/Documents/images/
 
 management:
   endpoints:

@@ -39,6 +39,11 @@ public class UserController {
         return userService.getAllUser(offset,limit);
     }
 
+    @RequestMapping(value = "/getList",method = RequestMethod.GET)
+    public BaseResult getList(Integer offset,Integer limit){
+        return userService.getAllUser(offset,limit);
+    }
+
 
     @RequestMapping(value = "/getById/{userId}",method = RequestMethod.GET)
     public User getAUser(@PathVariable("userId") Integer userId){

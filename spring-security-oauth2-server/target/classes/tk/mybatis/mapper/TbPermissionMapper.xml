@@ -30,4 +30,7 @@
         ON p.id = rp.permission_id
     WHERE u.id = ${userId}
   </select>
+  <select id="selectAllPermissions" resultMap="BaseResultMap">
+    select * from tb_permission;
+  </select>
 </mapper>

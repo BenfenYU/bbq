@@ -21,10 +21,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
-                .antMatchers("/user/user/").hasAnyAuthority("systemuser")
-                .antMatchers("/user/user/").hasAnyAuthority("system")
-                .antMatchers("/user/user/").hasAnyAuthority("systembbq")
-                .antMatchers("/user/user/").hasAnyAuthority("systemmessage");
+                .antMatchers("/user/").hasAnyAuthority("systemuser");
 
         // /user/getById/{userId}  bbq和message服务需要使用
         // /user/toLogin/ 不设限，登陆

@@ -58,6 +58,10 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) throws Exception {
         web.ignoring().antMatchers("/oauth/check_token");
         web.ignoring().antMatchers("/register");
+        web.ignoring().antMatchers("/getPermissions");
+        web.ignoring().antMatchers("/getRoles");
+        web.ignoring().antMatchers("/whichRole");
+        web.ignoring().antMatchers("/updateRole");
     }
 
     //    @Override

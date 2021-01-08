@@ -15,4 +15,7 @@
     <!--@mbg.generated generated on Thu Apr 04 18:13:12 CST 2019.-->
     id, parent_id, `name`, `enname`, description, created, updated
   </sql>
+  <select id="selectAllRoles" resultMap="BaseResultMap">
+    select * from tb_role;
+  </select>
 </mapper>

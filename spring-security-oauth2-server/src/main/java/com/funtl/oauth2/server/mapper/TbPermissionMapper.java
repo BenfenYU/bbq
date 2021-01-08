@@ -11,4 +11,7 @@ public interface TbPermissionMapper extends MyMapper<TbPermission> {
 
     List<TbPermission> selectByUserId(@Param("userId") Long userId);
 
+    List<TbPermission> selectAllPermissions();
+
+
 }
